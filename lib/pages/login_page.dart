@@ -1,4 +1,4 @@
-
+import 'package:authtentication_flutter/pages/forgot_password_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -13,7 +13,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-
   bool isObscure = true;
 
   @override
@@ -107,7 +106,14 @@ class _LoginPageState extends State<LoginPage> {
                 style: TextButton.styleFrom(
                   splashFactory: NoSplash.splashFactory,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ForgotPasswordPage(),
+                    ),
+                  );
+                },
                 child: const Text(
                   'Forgot Password?',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal),
@@ -170,7 +176,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             OutlinedButton(
-              style: OutlinedButton.styleFrom(padding: const EdgeInsets.symmetric( vertical: 15), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17))),
+              style: OutlinedButton.styleFrom(padding: const EdgeInsets.symmetric(vertical: 15), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17))),
               onPressed: () {},
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -204,15 +210,10 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Align(
               child: GestureDetector(
-                onTap: (){},
+                onTap: () {},
                 child: const Text(
                   'Continue as Guest',
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xff9D9D9D),
-                      decoration: TextDecoration.underline
-                  ),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xff9D9D9D), decoration: TextDecoration.underline),
                 ),
               ),
             )
