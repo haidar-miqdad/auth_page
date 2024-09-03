@@ -166,7 +166,7 @@ class VerifyPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17),),
                       padding: const EdgeInsets.symmetric(vertical: 15,),
                     ),
-                    child: const Text('Verify'),
+                    child: const Text('Verify', ),
                 ),
               ),
             ],
