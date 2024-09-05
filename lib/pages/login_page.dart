@@ -1,4 +1,5 @@
 import 'package:authtentication_flutter/pages/forgot_password_page.dart';
+import 'package:authtentication_flutter/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -150,7 +151,14 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 TextButton(
                   style: TextButton.styleFrom(splashFactory: NoSplash.splashFactory),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const RegisterPage(),
+                      ),
+                    );
+                  },
                   child: const Text(
                     'Sign Up',
                     style: TextStyle(

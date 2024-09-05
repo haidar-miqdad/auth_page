@@ -164,11 +164,30 @@ class VerifyPage extends StatelessWidget {
                       backgroundColor: Colors.black,
                       foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17),),
-                      padding: const EdgeInsets.symmetric(vertical: 15,),
+                      padding: const EdgeInsets.symmetric(vertical: 12,),
                     ),
-                    child: const Text('Verify', ),
+                    child: const Text('Verify', style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold
+                    ),),
                 ),
               ),
+             const SizedBox(height: 23,),
+             const Row(
+               mainAxisAlignment: MainAxisAlignment.center,
+               children: [
+                 Text('Resend OTP', style: TextStyle(
+                   fontWeight: FontWeight.bold,
+                   fontSize: 16,
+                 ),),
+                 SizedBox(width: 5,),
+                 Text('(00:12)', style: TextStyle(
+                   fontWeight: FontWeight.bold,
+                   fontSize: 16,
+                   color: Colors.grey
+                 ),),
+               ],
+             )
             ],
           ),
         ),
