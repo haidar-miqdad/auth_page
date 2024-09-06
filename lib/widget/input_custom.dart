@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class InputCustom extends StatelessWidget {
 
@@ -7,6 +8,7 @@ class InputCustom extends StatelessWidget {
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   bool? obscureText;
+  List<TextInputFormatter>? inputFormatters;
 
   InputCustom({super.key,
     required this.title,
@@ -30,6 +32,7 @@ class InputCustom extends StatelessWidget {
           ),),
           const SizedBox(height: 9,),
           TextField(
+            inputFormatters: inputFormatters,
             obscureText: obscureText ?? false,
             decoration: InputDecoration(
               border: OutlineInputBorder(

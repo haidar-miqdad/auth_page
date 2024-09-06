@@ -1,10 +1,12 @@
 import 'package:authtentication_flutter/pages/forgot_password_page.dart';
 import 'package:authtentication_flutter/pages/register_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../icons/icons.dart';
+import '../widget/button_custom.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -121,23 +123,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 15),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(17),
-                  ),
-                ),
-                child: const Text(
-                  'Login',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-              ),
+            ButtonCustom(
+              title: 'Login',
+              onPressed: () {},
             ),
             const SizedBox(
               height: 13,
@@ -231,3 +219,4 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+

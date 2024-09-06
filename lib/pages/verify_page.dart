@@ -1,4 +1,5 @@
 import 'package:authtentication_flutter/icons/icons.dart';
+import 'package:authtentication_flutter/widget/button_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -156,22 +157,7 @@ class VerifyPage extends StatelessWidget {
                ],
              ),
               const SizedBox(height: 23,),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                    onPressed: (){},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17),),
-                      padding: const EdgeInsets.symmetric(vertical: 12,),
-                    ),
-                    child: const Text('Verify', style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold
-                    ),),
-                ),
-              ),
+               ButtonCustom(title: 'Verify', onPressed: (){},),
              const SizedBox(height: 23,),
              const Row(
                mainAxisAlignment: MainAxisAlignment.center,

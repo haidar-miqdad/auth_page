@@ -1,4 +1,5 @@
 import 'package:authtentication_flutter/pages/verify_page.dart';
+import 'package:authtentication_flutter/widget/button_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -95,31 +96,17 @@ class ForgotPasswordPage extends StatelessWidget {
               const SizedBox(
                 height: 23,
               ),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const VerifyPage(),
-                      ),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.black,
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(vertical: 15),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(17),
+              ButtonCustom(
+                title: 'Get OTP',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const VerifyPage(),
                     ),
-                  ),
-                  child: const Text(
-                    'Get OTP',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
+                  );
+                },
+              )
             ],
           ),
         ),
